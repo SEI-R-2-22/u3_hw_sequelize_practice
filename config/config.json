@@ -1,16 +1,16 @@
 {
   "development": {
-    "database": "sequelize_practice_hw",
+    "database": "sequelize_hw_practice",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "sequelize_practice_hw_test",
+    "database": "sequelize_hw_practice_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "sequelize_practice_hw_production",
+    "database": "sequelize_hw_practice_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

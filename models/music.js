@@ -15,12 +15,13 @@ module.exports = (sequelize, DataTypes) => {
   }
   Music.init({
     title: DataTypes.STRING,
-    duration: DataTypes.INTEGER,
+    duration: DataTypes.STRING,
     genre: DataTypes.STRING,
     artist: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Music',
+    tableName: 'music'
   });
   return Music;
 };

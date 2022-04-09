@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Role.init({
-    raid_id: DataTypes.INTEGER,
     roleName: DataTypes.STRING,
     stat: DataTypes.STRING,
     type: DataTypes.STRING

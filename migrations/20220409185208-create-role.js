@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      raid_id: {
-        type: Sequelize.INTEGER
-      },
       roleName: {
         type: Sequelize.STRING
       },

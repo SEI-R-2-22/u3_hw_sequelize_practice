@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "sequelize_practice_lab_development",
+    "database": "sequelize_homework_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

@@ -8,7 +8,7 @@ module.exports = {
     {name: 'Abbey Road', songs: 17},
     {name: 'Sgt Peppers Lonely Hearts Club Band', songs: 13},
     {name: 'The Magical Mystery Tour', songs: 11}
-  ], {});
+  ]);
     /*
      * await queryInterface.bulkInsert('People', [{
      *   name: 'John Doe',

@@ -1,5 +1,6 @@
 'use strict'
-const { Model } = require('sequelize')
+const { Model, Deferrable } = require('sequelize')
+const Shopping_Cart = require('./shopping_cart')
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -16,11 +17,19 @@ module.exports = (sequelize, DataTypes) => {
       userName: DataTypes.STRING,
       password: DataTypes.STRING,
       email: DataTypes.STRING,
-      shopping_cart_id: DataTypes.BIGINT
+      shopping_cart_id: {
+        type: DataTypes.BIGINT,
+        references: {
+          model: Shopping_Cart,
+          key: 'id',
+          deferrable: Deferrable.INITIALLY_IMMEDIATE
+        }
+      }
     },
     {
       sequelize,
-      modelName: 'User'
+      modelName: 'User',
+      tableName: 'users'
     }
   )
   return User

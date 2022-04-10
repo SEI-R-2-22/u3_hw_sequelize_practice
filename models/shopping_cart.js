@@ -1,9 +1,7 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+'use strict'
+const { Model, Deferrable } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
-  class shopping_cart extends Model {
+  class Shopping_Cart extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,13 +11,24 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  shopping_cart.init({
-    product_id: DataTypes.BIGINT,
-    quantity: DataTypes.INTEGER,
-    price: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'shopping_cart',
-  });
-  return shopping_cart;
-};
+  Shopping_Cart.init(
+    {
+      product_id: {
+        type: DataTypes.BIGINT,
+        references: {
+          model: Product,
+          key: 'id',
+          deferrable: Deferrable.INITIALLY_IMMEDIATE
+        }
+      },
+      quantity: DataTypes.INTEGER,
+      price: DataTypes.INTEGER
+    },
+    {
+      sequelize,
+      modelName: 'Shopping_Cart',
+      tableName: 'shopping_carts'
+    }
+  )
+  return Shopping_Cart
+}

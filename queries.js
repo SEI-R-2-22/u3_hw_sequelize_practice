@@ -47,56 +47,60 @@ const deleteUser = async () => {
 /*************Product**************/
 /***************************/
 
-const createProduct = () => {
+const createProduct = async () => {
   const res = await Product.create({
-    name: "newProduct",
+    name: 'newProduct',
     price: 999,
     description: 'Aswesome new stuff'
   })
   stringify(res)
 }
-const readProduct = () => {
+const readProduct = async () => {
   const res = await Product.findAll()
   stringify(res)
 }
-const updateProduct = () => {
-  const res = await Product.update({
-    price: 9.99,
-    description: 'ALL much go'
-  },{where: {name: 'newProduct'}})
+const updateProduct = async () => {
+  const res = await Product.update(
+    {
+      price: 9.99,
+      description: 'ALL much go'
+    },
+    { where: { name: 'newProduct' } }
+  )
   console.log('update sucessful')
 }
-const deleteProduct = () => {
-  const res = await Product.destroy({where: {name: 'newProduct'}})
+const deleteProduct = async () => {
+  const res = await Product.destroy({ where: { name: 'newProduct' } })
 }
 
 /***************************/
 /*************Review**************/
 /***************************/
 
-const createReview = () => {
-  const res = await Review.create(
-    {
-      comments: 'this is an aswesome product',
-      rating: 5,
-    }
-  )
+const createReview = async () => {
+  const res = await Review.create({
+    comments: 'this is an aswesome product',
+    rating: 5
+  })
   stringify(res)
 }
-const readReview = () => {
+const readReview = async () => {
   const res = await Review.findAll()
   stringify(res)
 }
-const updateReview = () => {
-  const res = await Review.update({
-    rating: 4,
-    commments: 'product not working after one day'
-  },{where: {comments: 'this is an aswesome product'}})
+const updateReview = async () => {
+  const res = await Review.update(
+    {
+      rating: 4,
+      commments: 'product not working after one day'
+    },
+    { where: { comments: 'this is an aswesome product' } }
+  )
   console.log('update successful')
 }
 
-const deleteReview = () => {
-  const res = await Review.destroy({where: {rating: 4}})
+const deleteReview = async () => {
+  const res = await Review.destroy({ where: { rating: 4 } })
 }
 
 const main = async () => {
@@ -107,7 +111,7 @@ const main = async () => {
     // await deleteUser()
 
     // await createProduct()
-    // await readProduct()
+    await readProduct()
     // await updateProduct()
     // await deleteProduct()
 
@@ -117,7 +121,9 @@ const main = async () => {
     // await deleteReview()
   } catch (error) {
     console.log(error)
-  }finally{
+  } finally {
     await sequelize.close()
   }
 }
+
+main()

@@ -1,4 +1,5 @@
 'use strict'
+const { Product } = require('./product')
 const { Model, Deferrable } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Shopping_Cart extends Model {

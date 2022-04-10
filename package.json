@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DerWindFish/u3_hw_sequelize_practice#readme",
   "dependencies": {
+    "@ngneat/falso": "^4.0.0",
     "pg": "^8.7.3",
     "sequelize": "^6.18.0"
   }

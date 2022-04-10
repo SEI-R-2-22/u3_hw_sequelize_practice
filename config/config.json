@@ -1,16 +1,16 @@
 {
   "development": {
-    "database": "my_product_data",
+    "database": "ecommence",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "my_product_data_test",
+    "database": "ecommence_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "my_product_data_production",
+    "database": "ecommence_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

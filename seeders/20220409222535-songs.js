@@ -2,7 +2,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('songs', [
+    await queryInterface.bulkInsert('Songs', [
       { name: 'Back in the USSR',  songNum: 1 },
       { name: 'Dear Prudence',  songNum: 2 },
       { name: 'Glass Onion',  songNum: 3 },
@@ -104,7 +104,7 @@ module.exports = {
 
   async down (queryInterface, Sequelize) {
 
-    await queryInterface.bulkDelete('songs', null, {});
+    await queryInterface.bulkDelete('Songs', null, {});
     /**
      * Add commands to revert seed here.
      *

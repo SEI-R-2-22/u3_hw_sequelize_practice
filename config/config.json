@@ -1,0 +1,18 @@
+{
+  "development": {
+    "database": "hw_database_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "password": "V1k281ngs!"
+  },
+  "test": {
+    "database": "hw_database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "hw_database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

@@ -1,7 +1,5 @@
 {
   "development": {
-    "username": "pregan17",
-    "password": "Jicket11",
     "database": "sequelize_practice_hw",
     "host": "127.0.0.1",
     "dialect": "postgres"

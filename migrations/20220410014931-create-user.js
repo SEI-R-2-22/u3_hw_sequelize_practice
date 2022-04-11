@@ -17,8 +17,8 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      shoppingCart: {
-        type: Sequelize.BIGINT
+      address: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,

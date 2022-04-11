@@ -19,30 +19,9 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       price: DataTypes.INTEGER,
       description: DataTypes.STRING,
-      brand_id: {
-        type: DataTypes.BIGINT,
-        references: {
-          model: Brand,
-          key: 'id',
-          deferrable: Deferrable.INITIALLY_IMMEDIATE
-        }
-      },
-      category_id: {
-        type: DataTypes.BIGINT,
-        references: {
-          model: Category,
-          key: 'id',
-          deferrable: Deferrable.INITIALLY_IMMEDIATE
-        }
-      },
-      review_id: {
-        type: DataTypes.BIGINT,
-        references: {
-          model: Review,
-          key: 'id',
-          deferrable: Deferrable.INITIALLY_IMMEDIATE
-        }
-      }
+      brand: DataTypes.STRING,
+      category: DataTypes.STRING,
+      reviews: DataTypes.INTEGER
     },
     {
       sequelize,

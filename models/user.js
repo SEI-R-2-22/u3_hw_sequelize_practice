@@ -17,14 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       userName: DataTypes.STRING,
       password: DataTypes.STRING,
       email: DataTypes.STRING,
-      shopping_cart_id: {
-        type: DataTypes.BIGINT,
-        references: {
-          model: Shopping_Cart,
-          key: 'id',
-          deferrable: Deferrable.INITIALLY_IMMEDIATE
-        }
-      }
+      address: DataTypes.TEXT
     },
     {
       sequelize,

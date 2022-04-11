@@ -1,5 +1,6 @@
 const { User, Product, Review, sequelize } = require('./models')
 const review = require('./models/review')
+const falso = require('@ngneat/falso')
 
 const stringify = (data) => {
   console.log(JSON.stringify(data, null, 2))
@@ -13,7 +14,8 @@ const createUser = async () => {
   const res = await User.create({
     userName: 'NewUser',
     password: 'random123',
-    email: 'test@test.com'
+    email: 'test@test.com',
+    address: `${falso.randStreetAddress()}, ${falso.randCity()}, ${falso.randState()}, ${falso.randZipCode()}`
   })
   stringify(res)
 }
@@ -51,7 +53,10 @@ const createProduct = async () => {
   const res = await Product.create({
     name: 'newProduct',
     price: 999,
-    description: 'Aswesome new stuff'
+    description: 'Aswesome new stuff',
+    brand: falso.randBrand(),
+    category: falso.randProductCategory(),
+    reviews: falso.randNumber()
   })
   stringify(res)
 }
@@ -79,6 +84,7 @@ const deleteProduct = async () => {
 
 const createReview = async () => {
   const res = await Review.create({
+    userName: 'MyUser',
     comments: 'this is an aswesome product',
     rating: 5
   })
@@ -94,7 +100,7 @@ const updateReview = async () => {
       rating: 4,
       commments: 'product not working after one day'
     },
-    { where: { comments: 'this is an aswesome product' } }
+    { where: { userName: 'MyUser' } }
   )
   console.log('update successful')
 }
@@ -103,18 +109,17 @@ const deleteReview = async () => {
   const res = await Review.destroy({ where: { rating: 4 } })
 }
 
+//uncomment to run code
 const main = async () => {
   try {
     // await readUser()
     // await createUser()
     // await updateUser()
     // await deleteUser()
-
     // await createProduct()
-    await readProduct()
+    // await readProduct()
     // await updateProduct()
     // await deleteProduct()
-
     // await createReview()
     // await readReview()
     // await updateReview()

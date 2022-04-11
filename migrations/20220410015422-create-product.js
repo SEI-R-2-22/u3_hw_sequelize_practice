@@ -18,13 +18,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       brand: {
-        type: Sequelize.BIGINT
+        type: Sequelize.STRING
       },
       category: {
-        type: Sequelize.BIGINT
+        type: Sequelize.STRING
       },
       reviews: {
-        type: Sequelize.BIGINT
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

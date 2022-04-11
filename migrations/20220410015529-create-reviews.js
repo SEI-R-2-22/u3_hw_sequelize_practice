@@ -1,4 +1,7 @@
 'use strict'
+
+const { sequelize } = require('../models')
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('reviews', {
@@ -7,6 +10,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      userName: {
+        type: Sequelize.STRING
       },
       comments: {
         type: Sequelize.STRING

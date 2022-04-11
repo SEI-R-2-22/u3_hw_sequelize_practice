@@ -20,7 +20,7 @@ module.exports = {
         onDelete: 'CASCADE',
         references: 'Users',
         key: 'id',
-        as: 'user_id'
+        as: 'users_id'
       },
       createdAt: {
         allowNull: false,

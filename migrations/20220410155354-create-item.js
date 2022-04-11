@@ -17,7 +17,7 @@ module.exports = {
         references: {
           model: 'Menus',
           key: 'id',
-          as: 'menu_id'
+          as: 'menus_id'
         }
       },
       createdAt: {

@@ -22,7 +22,7 @@ You can hard code in information for the create, update, and delete. You can eit
 These commands should be done in order. Remember, if you are a Windows user, these commands will be different obviously.
 
 ```sh
-npm init -y
+npm init
 ```
 
 ```sh
@@ -75,10 +75,10 @@ Run your seed using:
 sequelize db:seed:all
 ```
 
-Hint: You can also use _falso_:
+Hint: You can also use _faker_:
 
 ```sh
-npm i @ngneat/falso
+npm install --save-dev faker
 ```
 
 ## Requiring Models
@@ -100,3 +100,5 @@ sequelize db:migrate:undo
 ## Submission
 
 Submit your pull request utilizing the **[PR Guidelines](https://github.com/SEI-R-2-22/template_pull_request)**.
+
+Pull requests are due by next day at `9:00 am EST`.

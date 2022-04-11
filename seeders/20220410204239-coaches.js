@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  
   up: (queryInterface, Sequelize) => {
     /**
      * Add seed commands here.

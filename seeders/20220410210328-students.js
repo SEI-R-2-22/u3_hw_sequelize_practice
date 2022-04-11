@@ -15,6 +15,7 @@ const fakestudents = [...Array(50)].map((st) => (
     updatedAt: new Date()
   }
 ))
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     /**

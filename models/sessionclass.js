@@ -31,5 +31,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'SessionClass',
     tableName: 'session_classes'
   });
+  
   return SessionClass;
-};
+};   

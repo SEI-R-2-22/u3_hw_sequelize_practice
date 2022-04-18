@@ -62,8 +62,8 @@ const createSelfCare = async () => {
 
 const updateHair = async () => {
   const update = await Hair.update(
-    { wash: "step 1" },
-    { where: { wash: "do oil first" } }
+    { wash: 'do oil first' },
+    { where: { wash: 'part 1' } }
   );
   console.log(update);
   stringify(result);
@@ -71,8 +71,8 @@ const updateHair = async () => {
 
 const updateScrub = async () => {
   const update = await Scrub.update(
-    { loofa: "part 1" },
-    { where: { wash: "try new body wash" } }
+    { loofa: 'try new body wash' },
+    { where: { loofa: 'part 1' } }
   );
   console.log(update);
   stringify(result);
@@ -80,8 +80,8 @@ const updateScrub = async () => {
 
 const updateSelfCare = async () => {
   const update = await SelfCare.update(
-    { lotion: "rub" },
-    { where: { wash: "rub deep into skin" } }
+    { lotion: 'deep wash rub' },
+    { where: { lotion: 'rub' } }
   );
   console.log(update);
   stringify(result);
@@ -91,21 +91,21 @@ const updateSelfCare = async () => {
 
 const deleteHair = async () => {
   const result = await Hair.destroy({
-    where: { ricewater: "Step 4" },
+    where: { wash: 'do oil first' },
   });
 };
 // console.log(deleted)
 
 const deleteScrub = async () => {
   const result = await Scrub.destroy({
-    where: { loofa: "Step 1" },
+    where: { loofa: 'try new body wash' },
   });
 };
 // console.log(deleted)
 
 const deleteSelfCare = async () => {
   const result = await SelfCare.destroy({
-    where: { spray: "squeeze" },
+    where: { lotion: "deep wash rub" },
   });
 };
 // console.log(deleted)
